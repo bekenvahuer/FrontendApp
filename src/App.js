@@ -169,6 +169,7 @@ function App() {
                             <Route path="/6Meses" element={<TestForm6Meses />} />
                             <Route path="/login" element={<Login setIsAuthenticated={setIsAuthenticated} />} />
                             <Route path="/unirse2" element={<CustomPage />} />
+                            <Route path="/@BarberShop1046" element={<CalendarPage />} />
                             <Route path="/test" element={<CustomPage />} />
                             <Route path="/:adminKey" element={<Login setIsAuthenticated={setIsAuthenticated} />} />
                             <Route path="/" element={<Navigate to={getRedirectPath()} replace />} />

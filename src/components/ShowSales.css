@@ -1,0 +1,119 @@
+.content-container {
+  background-color: #fff;
+  /* color: #a27014;  */
+  
+}
+
+.App {
+  background-color: #fff;
+  
+}
+
+.filter-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.filter-container input,
+.filter-container select,
+.filter-container button {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  flex: 1;
+  min-width: 150px; /* Para que los elementos tengan un ancho mínimo */
+}
+
+.filter-container button {
+  background-color: #a27014;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.filter-container button:hover {
+  background-color: #a27014;
+}
+  
+  .table-container {
+    height: 400px; /* Ajusta esto según sea necesario */
+    overflow-y: auto;
+  }
+  
+  .table-container thead {
+    position: sticky;
+    top: 0;
+    z-index: 5;
+  }
+  
+  /* Estilos para los Modals-ventanas emergentes */
+
+  .ReactModal__Overlay,
+  .ReactModal__Overlay--after-open.modal-overlay {
+  background-color: rgba(0, 0, 0, 0.75);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000; /* Asegúrate de que el modal esté en frente */
+}
+
+.ReactModal__Content,
+.ReactModal__Content--after-open.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 500px;
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1001; /* Asegúrate de que el contenido del modal esté en frente */
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.modal-header h2 {
+  margin: 0;
+}
+
+.modal-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.modal-buttons .btn {
+  margin: 0;
+}
+
+.action-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px; /* Espacio entre los botones */
+}
+
+.action-buttons .btn {
+  flex: 1;
+  min-width: 45%; /* Ajusta según sea necesario */
+  padding: 5px;
+}
+
+/* Media Query para pantallas móviles */
+@media (max-width: 768px) {
+  .action-buttons {
+      flex-direction: row;
+  }
+}

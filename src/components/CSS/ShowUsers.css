@@ -1,0 +1,20 @@
+.Container-calendarShowUsers {
+  margin-top: 20px;
+}
+
+.Container-calendarShowUsers3 {
+  margin-top: 20px;
+  border-radius: 8px 8px 8px 8px;
+  background-color: #f1efff;
+}
+
+.table-container {
+  width: 100%;
+  color: #eee6fe;
+  height: 550px;
+  max-width: 1200px;
+  height: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f1efff;
+}

@@ -1,0 +1,70 @@
+/* Estilo general del carrusel */
+.container-logo {
+  margin-top: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Contenedor de la imagen estática y el texto */
+.imagen-estaticaLogo {
+  display: flex;
+  flex-direction: column;
+  /* Apila imagen y texto verticalmente */
+  align-items: center;
+  max-width: 500px;
+}
+
+/* Estilos de la imagen con efecto neumórfico redondo */
+.imagen-estaticaLogo img {
+  width: 120px;
+  /* Tamaño base */
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: #d8cafa;
+  padding: 10px;
+  border: none;
+
+  /* Efecto neumórfico sunken */
+  box-shadow:
+    inset 4px 4px 8px rgba(156, 130, 206, 0.7),
+    inset -4px -4px 8px rgba(255, 255, 255, 0.8);
+
+  transition: all 0.3s ease;
+  margin: 10px 0;
+}
+
+/* Efecto hover */
+.imagen-estaticaLogo img:hover {
+  box-shadow:
+    inset 3px 3px 6px rgba(156, 130, 206, 0.8),
+    inset -3px -3px 6px rgba(255, 255, 255, 0.9);
+}
+
+/* Texto acompañante (si existe) */
+.imagen-estaticaLogo .texto-logo {
+  color: #090027;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  margin-top: 15px;
+}
+
+
+/* Versión móvil */
+@media (max-width: 768px) {
+  .imagen-estaticaLogo img {
+    width: 150px;
+    height: 150px;
+    padding: 6px;
+    margin: 5px 0;
+    box-shadow:
+      inset 3px 3px 6px rgba(156, 130, 206, 0.7),
+      inset -3px -3px 6px rgba(255, 255, 255, 0.8);
+  }
+
+  .imagen-estaticaLogo .texto-logo {
+    font-size: 0.9em;
+    margin-top: 10px;
+  }
+}

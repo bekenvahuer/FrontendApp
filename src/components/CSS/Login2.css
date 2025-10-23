@@ -1,0 +1,419 @@
+/* Contenedor principal que ocupa toda la pantalla */
+.content-containerLoginF {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000000;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    /* Evita el scroll en el contenedor principal */
+}
+
+/* Contenedor del login */
+.login-containerLoginF {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    /* Añade un padding para evitar que el contenido toque los bordes */
+}
+
+/* Caja de login */
+.login-boxF {
+    background: #000000;
+    border-radius: 15px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    max-width: 600px;
+    max-height: 100vh;
+    /* Limita la altura máxima al 90% de la pantalla */
+    transition: all 0.3s ease;
+}
+
+/* Imagen */
+.login-imageF {
+    flex: 0 0 auto;
+    /* Evita que la imagen crezca */
+    text-align: center;
+    padding: 10px;
+}
+
+.login-imageF img {
+    width: 100%;
+    height: auto;
+    max-width: 150px;
+    /* Reduce el tamaño de la imagen */
+    display: block;
+    margin: 0 auto;
+}
+
+/* Contenedor del formulario */
+.login-formF {
+    flex: 1;
+    /* Ocupa el espacio restante */
+    padding: 20px;
+    text-align: center;
+    background: #f4f7f8;
+    border-radius: 8px;
+    margin: 0 20px 20px 20px;
+    overflow-y: auto;
+    /* Añade scroll vertical */
+    scrollbar-width: none;
+    /* Oculta la barra de desplazamiento en Firefox */
+    -ms-overflow-style: none;
+    /* Oculta la barra de desplazamiento en IE/Edge */
+}
+
+.login-formF::-webkit-scrollbar {
+    display: none;
+    /* Oculta la barra de desplazamiento en Chrome/Safari */
+}
+
+/* Título */
+.login-formF h1 {
+    color: #a57fff;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+/* Campos de entrada */
+.login-formF input[type="text"],
+.login-formF input[type="password"],
+.login-formF input[type="email"],
+.login-formF input[type="tel"],
+.login-formF select,
+.login-formF textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    background-color: #e8eeef;
+    color: #8a97a0;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
+}
+
+.login-formF input:focus {
+    border-color: #a57fff;
+    box-shadow: 0px 0px 5px rgba(56, 21, 212, 0.5);
+}
+
+/* Botón */
+.login-formF button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    background-color: #a57fff;
+    color: white;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+.login-formF button:hover {
+    background-color: #a57fff;
+}
+
+/* Footer */
+.container-FooterF {
+    flex: 0 0 auto;
+    /* Evita que el footer crezca */
+    text-align: center;
+    font-size: 14px;
+    color: #555;
+    padding: 10px;
+}
+
+/* Estilos específicos para el formulario */
+fieldset {
+    margin-bottom: 20px;
+    border: none;
+}
+
+legend {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+    color: #a57fff;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #384047;
+}
+
+.number {
+    background-color: #5fcf80;
+    color: #fff;
+    height: 30px;
+    width: 30px;
+    display: inline-block;
+    font-size: 0.8em;
+    margin-right: 4px;
+    line-height: 30px;
+    text-align: center;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.2);
+    border-radius: 100%;
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.479);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    /* Asegura que esté por encima de otros elementos */
+}
+
+.modal-content {
+    background-color: white;
+    color: black;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    /* Opcional: limita el ancho máximo */
+    width: 90%;
+    /* Opcional: hace que sea responsive */
+}
+
+.edit-button {
+    background-color: #d1beff;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+    margin-bottom: 15px;
+    /* Añadido para separación del botón de pago */
+}
+
+.edit-button:hover {
+    background-color: #c0a8ff;
+    /* Efecto hover opcional */
+}
+
+/* Estilos para el modal QR */
+.qr2-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1001;
+}
+
+.Container-qr2 {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 40%;
+    max-height: 90%;
+    overflow: auto;
+    position: relative;
+    /* Ocultar scrollbar pero mantener funcionalidad */
+    scrollbar-width: none; /* Para Firefox */
+    -ms-overflow-style: none; /* Para IE y Edge */
+}
+
+/* Para Chrome, Safari y Opera */
+.Container-qr2::-webkit-scrollbar {
+    display: none;
+}
+
+.Container-qr2 {
+    overflow: -moz-scrollbars-none; /* Versiones muy antiguas de Firefox */
+}
+
+.qr2-layout-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Sección superior - Logo */
+.qr2-logo-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.qr2-logo-image {
+    width: 100px;
+    height: auto;
+}
+
+.qr2-plan-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.logo2-info-value {
+    font-weight: bold;
+    color: #fff;
+}
+
+.logo-info-value {
+    font-weight: bold;
+    color: #fff;
+}
+
+.logo-info-label {
+    color: #fff;
+    font-size: 0.9rem;
+}
+
+/* Sección central - QR */
+.qr2-code-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.qr2-info-username {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+.qr2-payment-image {
+    width: 100%;
+    height: auto;
+    margin: 10px 0;
+}
+
+.qr2-info-url-container {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background-color: #333;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.qr2-info-url {
+    color: white;
+}
+
+.copy2-url-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: white;
+}
+
+.copy2-notification {
+    background-color: #4CAF50;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    margin-top: 5px;
+}
+
+/* Sección inferior - Información */
+.qr2-info-section {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 5px 10px;
+}
+
+.qr2-info-value {
+    font-weight: bold;
+    color: #fff;
+}
+
+.qr2-info-label {
+    color: #fff;
+    font-size: 0.9rem;
+}
+
+/* Botón cerrar */
+.qr3-close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #2d2b29;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+}
+
+/* 📌 Modo horizontal en móviles y tablets */
+@media (max-width: 940px) {
+    .Container-qr2 {
+        max-width: 90%;
+        max-height: 90%;
+    }
+
+    .login-boxF {
+        flex-direction: column;
+        width: 90%;
+        max-width: 600px;
+        max-height: 105vh;
+    }
+
+    .login-imageF img {
+        max-width: 120px;
+        /* Reduce aún más el tamaño de la imagen en móviles */
+    }
+
+    .login-formF {
+        margin: 10px;
+    }
+}
+
+/* 📌 Volver a diseño vertical en móviles en vista vertical (desde 430px hasta 900px) */
+@media (max-width: 940px) and (max-height: 430px) {
+    .login-boxF {
+        flex-direction: row;
+        width: 100%;
+        max-width: 700px;
+    }
+
+    .login-imageF {
+        flex: 1;
+    }
+
+    .login-imageF img {
+        max-width: 100px;
+        /* Reduce el tamaño de la imagen en vista horizontal */
+    }
+
+    .login-formF {
+        flex: 1;
+        padding: 10px;
+    }
+}

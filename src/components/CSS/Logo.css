@@ -1,0 +1,30 @@
+/* Estilo general del carrusel */
+.container-logo {
+  margin-top: -90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+/* Contenedor de la imagen estática y el texto */
+.imagen-estaticaLogo {
+  display: flex;
+  align-items: center;
+  max-width: 500px; /* Ajusta según sea necesario */
+}
+
+/* Estilos de la imagen */
+.imagen-estaticaLogo img {
+  margin-left: 0px;
+  width: 300px; /* Ajusta el tamaño de la imagen */
+  height: auto;
+  border-radius: 10px;
+}
+
+@media (max-width: 1000px) {
+  .imagen-estaticaLogo img {
+    width: 100px; /* Más grande en móvil */
+  }
+}
+

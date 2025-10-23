@@ -1,0 +1,148 @@
+/* Menú de navegación estilo barra superior */
+.sidebar-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(0deg, #f7f5ff 5%, #c5b0f9 100%);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 60px;
+  z-index: 1000;
+  margin-left: -20px;
+  /* display: none; */
+}
+
+.sidebar-container {
+  display: none;
+}
+
+/* Estilo de cada enlace en el menú */
+.sidebar-item {
+  width: 50px;
+  /* Mismo ancho/alto */
+  height: 50px;
+  padding: 15px;
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  /* Forma perfectamente circular */
+  /* Forma ovalada (puedes usar 50% para círculos) */
+  text-decoration: none;
+  color: #4a2d7a;
+  /* Color de texto oscuro para contraste */
+  font-weight: 500;
+
+  /* Efecto Neumorphism adaptado al gradiente del sidebar */
+  background: linear-gradient(145deg, #f0e9ff, #d0c1f5);
+  /* Versión más clara del gradiente */
+  box-shadow:
+    8px 8px 16px rgba(156, 130, 206, 0.4),
+    /* Sombra morada */
+    -8px -8px 16px rgba(255, 255, 255, 0.6),
+    /* Sombra blanca */
+    inset 1px 1px 2px rgba(255, 255, 255, 0.2),
+    /* Brillo interno */
+    inset -1px -1px 2px rgba(156, 130, 206, 0.1);
+  /* Sombra interna */
+
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.sidebar-item::before {
+  content: '';
+  position: absolute;
+  top: -10%;
+  left: -10%;
+  width: 120%;
+  height: 120%;
+  background: linear-gradient(45deg,
+      rgba(255, 255, 255, 0.1) 0%,
+      rgba(255, 255, 255, 0) 50%);
+  transform: rotate(30deg);
+  pointer-events: none;
+}
+
+/* Efecto hover (flotación más pronunciada) */
+.sidebar-item:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    12px 12px 24px rgba(156, 130, 206, 0.5),
+    -12px -12px 24px rgba(255, 255, 255, 0.7),
+    inset 1px 1px 3px rgba(255, 255, 255, 0.3);
+  color: #3a1d6e;
+  /* Texto más oscuro al interactuar */
+}
+
+/* Efecto active (presionado) */
+.sidebar-item:active {
+  transform: translateY(1px);
+  box-shadow:
+    4px 4px 8px rgba(156, 130, 206, 0.3),
+    -4px -4px 8px rgba(255, 255, 255, 0.5),
+    inset 3px 3px 5px rgba(156, 130, 206, 0.2);
+}
+
+.sidebar-item a {
+  color: #090027;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease, background-color 0.3s ease;
+  padding: 10px 15px;
+  /* Relleno dentro de cada enlace */
+}
+
+
+
+/* Para evitar que el contenido principal quede debajo de la barra */
+.main-content {
+  margin-top: 60px;
+  /* Ajusta este valor según la altura de la barra */
+}
+
+.sidebar-icon {
+  width: 30px;
+  /* Ajusta según necesites */
+  height: auto;
+  display: block;
+  margin: 10px auto;
+}
+
+.sidebar-icon2 {
+  width: 50px;
+  /* Ajusta según necesites */
+  height: auto;
+  display: block;
+  margin: 10px auto;
+}
+
+.sidebar-icon3 {
+  width: 20px;
+  /* Ajusta según necesites */
+  height: auto;
+  display: block;
+  margin: 10px auto;
+}
+
+.sidebar-icon4 {
+  width: 30px;
+  /* Ajusta según necesites */
+  height: auto;
+  display: block;
+  margin: 10px auto;
+}
+
+@media (max-width: 480px) {
+  .sidebar-item {
+    padding: 0 20px;
+  }
+}

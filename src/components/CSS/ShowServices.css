@@ -1,0 +1,182 @@
+.Container-calendarShowServices {
+  margin-top: 20px;
+}
+
+.Container-calendarShowServices2 {
+  margin-top: 20px;
+  border-radius: 8px 8px 0 0;
+  background-color: #f1efff;
+}
+
+/* Contenedor principal */
+.neumorphic-table-container {
+  width: 95%;
+  /* Reducimos el ancho en móviles */
+  color: #090027;
+  max-width: 1600px;
+  min-height: 500px;
+  /* Cambiamos height fijo por min-height */
+  margin: 20px auto;
+  padding: 15px;
+  background-color: #f1efff;
+  border-radius: 15px;
+  box-shadow:
+    8px 8px 16px rgba(156, 130, 206, 0.4),
+    -8px -8px 16px rgba(255, 255, 255, 0.8),
+    inset 4px 4px 8px rgba(156, 130, 206, 0.1),
+    inset -4px -4px 8px rgba(255, 255, 255, 0.3);
+  overflow-x: auto;
+  /* Permite scroll horizontal */
+  -webkit-overflow-scrolling: touch;
+  /* Scroll suave en iOS */
+}
+
+/* Tabla responsive */
+.neumorphic-table {
+  width: 100%;
+  min-width: 600px;
+  /* Ancho mínimo para mantener estructura */
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+/* Estilos para celdas */
+.neumorphic-table th,
+.neumorphic-table td {
+  padding: 10px 12px;
+  text-align: center;
+  /* Aseguramos que el contenido esté centrado */
+  vertical-align: middle;
+  background-color: rgba(241, 239, 255, 0.7);
+  color: #090027;
+  border-bottom: 1px solid rgba(156, 130, 206, 0.2);
+  white-space: nowrap;
+  /* Evita saltos de línea */
+}
+
+.neumorphic-table th {
+  background-color: rgba(156, 130, 206, 0.3);
+  font-weight: 600;
+  text-align: center;
+  /* Centrado horizontal */
+  vertical-align: middle;
+  /* Centrado vertical */
+  padding: 12px 5px;
+  /* Reducimos padding lateral */
+}
+
+.neumorphic-table tr:hover td {
+  background-color: rgba(156, 130, 206, 0.15);
+}
+
+/* Efecto neumórfico para los botones dentro de la tabla */
+.neumorphic-table .action-btn {
+  background-color: #f1efff;
+  border: none;
+  border-radius: 8px;
+  padding: 6px 12px;
+  margin: 0 4px;
+  box-shadow:
+    3px 3px 6px rgba(156, 130, 206, 0.3),
+    -3px -3px 6px rgba(255, 255, 255, 0.7);
+  transition: all 0.2s ease;
+}
+
+.neumorphic-table .action-btn:hover {
+  box-shadow:
+    2px 2px 4px rgba(156, 130, 206, 0.4),
+    -2px -2px 4px rgba(255, 255, 255, 0.8);
+}
+
+.neumorphic-table .action-btn:active {
+  box-shadow:
+    inset 2px 2px 4px rgba(156, 130, 206, 0.3),
+    inset -2px -2px 4px rgba(255, 255, 255, 0.5);
+}
+
+.neumorphic-btn {
+  background-color: #f1efff;
+  color: #090027;
+  border: none;
+  border-radius: 10px;
+  box-shadow:
+    6px 6px 12px rgba(156, 130, 206, 0.4),
+    -6px -6px 12px rgba(255, 255, 255, 0.8),
+    inset 3px 3px 5px rgba(156, 130, 206, 0.1),
+    inset -3px -3px 5px rgba(255, 255, 255, 0.3);
+  transition: all 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  max-width: 250px;
+  /* Añadido límite de ancho */
+  width: 100%;
+  /* Para que ocupe el ancho disponible hasta 250px */
+  margin: 0 auto;
+  /* Centrado horizontal */
+}
+
+.neumorphic-btn:hover {
+  box-shadow:
+    4px 4px 8px rgba(156, 130, 206, 0.5),
+    -4px -4px 8px rgba(255, 255, 255, 0.9),
+    inset 2px 2px 4px rgba(156, 130, 206, 0.2),
+    inset -2px -2px 4px rgba(255, 255, 255, 0.4);
+  text-decoration: none;
+  color: #090027;
+}
+
+.neumorphic-btn:active {
+  box-shadow:
+    inset 4px 4px 8px rgba(156, 130, 206, 0.3),
+    inset -4px -4px 8px rgba(255, 255, 255, 0.5);
+}
+
+.neumorphic-btn .icon {
+  color: #090027;
+}
+
+.btn-warning {
+  color: #090027;
+}
+
+.btn-danger {
+  color: #090027;
+}
+
+/* Media queries para móviles */
+@media (max-width: 768px) {
+  .neumorphic-table-container {
+    width: 98%;
+    padding: 10px;
+    margin: 10px auto;
+  }
+
+  .neumorphic-table th,
+  .neumorphic-table td {
+    padding: 8px 10px;
+    font-size: 0.9em;
+  }
+
+  .action-buttons {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .neumorphic-table th,
+  .neumorphic-table td {
+    padding: 6px 8px;
+    font-size: 0.85em;
+  }
+
+  .action-btn {
+    padding: 4px 8px !important;
+    margin: 0 2px !important;
+  }
+}

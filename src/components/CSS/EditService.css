@@ -1,0 +1,119 @@
+.Container-calendarEditService {
+  margin-top: 20px;
+
+}
+
+.Container-calendarEditServices2 {
+  margin-top: 20px;
+  border-radius: 8px 8px 0 0;
+  background-color: #f1efff;
+}
+
+.calendarEditServices {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.neumorphic-btn {
+  background-color: #f1efff;
+  color: #090027;
+  border: none;
+  border-radius: 10px;
+  box-shadow:
+    6px 6px 12px rgba(156, 130, 206, 0.4),
+    -6px -6px 12px rgba(255, 255, 255, 0.8),
+    inset 3px 3px 5px rgba(156, 130, 206, 0.1),
+    inset -3px -3px 5px rgba(255, 255, 255, 0.3);
+  transition: all 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  cursor: pointer;
+  flex: 1;
+  min-width: 200px;
+  text-align: center;
+}
+
+.neumorphic-btn:hover {
+  box-shadow:
+    4px 4px 8px rgba(156, 130, 206, 0.5),
+    -4px -4px 8px rgba(255, 255, 255, 0.9),
+    inset 2px 2px 4px rgba(156, 130, 206, 0.2),
+    inset -2px -2px 4px rgba(255, 255, 255, 0.4);
+}
+
+.neumorphic-btn:active {
+  box-shadow:
+    inset 4px 4px 8px rgba(156, 130, 206, 0.3),
+    inset -4px -4px 8px rgba(255, 255, 255, 0.5);
+}
+
+/* Botón específico de cancelar */
+.neumorphic-btn.cancel-btn {
+  /* Eliminé el espacio entre las clases */
+  background-color: #382957 !important;
+  color: #eddeff !important;
+  box-shadow:
+    6px 6px 12px rgba(56, 41, 87, 0.4),
+    -6px -6px 12px rgba(255, 255, 255, 0.3),
+    inset 3px 3px 5px rgba(56, 41, 87, 0.2),
+    inset -3px -3px 5px rgba(255, 255, 255, 0.2);
+}
+
+/* Botón específico de enviar */
+.neumorphic-btn.submit-btn {
+  /* Selector más específico */
+  background-color: #c5b0f9 !important;
+  color: #090027 !important;
+  box-shadow:
+    6px 6px 12px rgba(197, 176, 249, 0.4),
+    -6px -6px 12px rgba(255, 255, 255, 0.3),
+    inset 3px 3px 5px rgba(197, 176, 249, 0.2),
+    inset -3px -3px 5px rgba(255, 255, 255, 0.2);
+}
+
+/* Estados hover */
+.neumorphic-btn.cancel-btn:hover {
+  background-color: #382957 !important;
+  box-shadow:
+    4px 4px 8px rgba(56, 41, 87, 0.5),
+    -4px -4px 8px rgba(255, 255, 255, 0.2),
+    inset 2px 2px 4px rgba(56, 41, 87, 0.3),
+    inset -2px -2px 4px rgba(255, 255, 255, 0.3);
+}
+
+.neumorphic-btn.submit-btn:hover {
+  background-color: #c5b0f9 !important;
+  box-shadow:
+    4px 4px 8px rgba(197, 176, 249, 0.5),
+    -4px -4px 8px rgba(255, 255, 255, 0.2),
+    inset 2px 2px 4px rgba(197, 176, 249, 0.3),
+    inset -2px -2px 4px rgba(255, 255, 255, 0.3);
+}
+
+@media (max-width: 900px) {
+
+  .calendarEditServices {
+    margin-left: 150px;
+    margin-right: 150px;
+  }
+
+
+}
+
+@media (min-width: 1180px) {
+
+  .calendarEditServices {
+    margin-left: 300px;
+    margin-right: 300px;
+  }
+}
+
+@media (max-width: 800px) {
+  .calendarEditServices {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}

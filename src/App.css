@@ -1,0 +1,64 @@
+.App {
+  text-align: center;
+  background-color: white;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.sidebar-container {
+  width: 250px; /* ajusta el ancho según sea necesario */
+  flex-shrink: 0; /* para asegurarse de que la barra lateral no se contraiga */
+  transition: width 0.3s; /* transición suave para el cambio de ancho */
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto; /* para permitir el desplazamiento vertical si la barra lateral es más larga que la pantalla */
+}
+
+.sidebar-container.collapsed {
+  width: 100px; /* ancho cuando la barra lateral está colapsada */
+}
+
+.content-container {
+  flex: 1;
+  padding: 20px;
+  transition: margin-left 0.3s; /* transición suave para el cambio de margen */
+  overflow-y: auto; /* para permitir el desplazamiento vertical si el contenido es más largo que la pantalla */
+}
+
+.content-container.expanded {
+  margin-left: 80px; /* margen cuando la barra lateral está colapsada */
+}

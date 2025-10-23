@@ -1,0 +1,173 @@
+/* Contenedor principal */
+.Container-calendarCreateEvent {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.Container-calendarCreateEvent2 {
+  margin-top: 20px;
+  border-radius: 8px 8px 0 0;
+  background-color: #f1efff;
+  flex: 1;
+  padding-bottom: 80px;
+  /* Espacio para el footer */
+  position: relative;
+}
+
+.calendarCreateEvent {
+  margin-left: 10px;
+  margin-right: 10px;
+  padding-bottom: 20px;
+}
+
+/* Contenedor neumórfico hundido */
+.neumorphic-sunken {
+  background: #f1efff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow:
+    inset 4px 4px 8px rgba(156, 130, 206, 0.4),
+    inset -4px -4px 8px rgba(255, 255, 255, 0.8);
+  transition: all 0.3s ease;
+  margin-bottom: 20px;
+}
+
+/* Inputs con efecto neumórfico */
+.neumorphic-input,
+.form-control {
+  background: rgba(241, 239, 255, 0.7);
+  border: none;
+  border-radius: 8px;
+  box-shadow:
+    inset 3px 3px 6px rgba(156, 130, 206, 0.3),
+    inset -3px -3px 6px rgba(255, 255, 255, 0.5);
+  padding: 10px 15px;
+  color: #090027;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.neumorphic-input:focus,
+.form-control:focus {
+  outline: none;
+  box-shadow:
+    inset 2px 2px 4px rgba(156, 130, 206, 0.5),
+    inset -2px -2px 4px rgba(255, 255, 255, 0.7),
+    0 0 0 2px rgba(156, 130, 206, 0.2);
+}
+
+/* Botones */
+.button-group {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  margin-top: 25px;
+  flex-wrap: wrap;
+}
+
+.neumorphic-btn {
+  background-color: #f1efff;
+  color: #090027;
+  border: none;
+  border-radius: 10px;
+  box-shadow:
+    6px 6px 12px rgba(156, 130, 206, 0.4),
+    -6px -6px 12px rgba(255, 255, 255, 0.8),
+    inset 3px 3px 5px rgba(156, 130, 206, 0.1),
+    inset -3px -3px 5px rgba(255, 255, 255, 0.3);
+  transition: all 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  cursor: pointer;
+  flex: 1;
+  min-width: 200px;
+  text-align: center;
+}
+
+.neumorphic-btn:hover {
+  box-shadow:
+    4px 4px 8px rgba(156, 130, 206, 0.5),
+    -4px -4px 8px rgba(255, 255, 255, 0.9),
+    inset 2px 2px 4px rgba(156, 130, 206, 0.2),
+    inset -2px -2px 4px rgba(255, 255, 255, 0.4);
+}
+
+.neumorphic-btn:active {
+  box-shadow:
+    inset 4px 4px 8px rgba(156, 130, 206, 0.3),
+    inset -4px -4px 8px rgba(255, 255, 255, 0.5);
+}
+
+/* Botón específico de cancelar */
+.neumorphic-btn.cancel-btn {
+  /* Eliminé el espacio entre las clases */
+  background-color: #382957 !important;
+  color: #eddeff !important;
+  box-shadow:
+    6px 6px 12px rgba(56, 41, 87, 0.4),
+    -6px -6px 12px rgba(255, 255, 255, 0.3),
+    inset 3px 3px 5px rgba(56, 41, 87, 0.2),
+    inset -3px -3px 5px rgba(255, 255, 255, 0.2);
+}
+
+/* Botón específico de enviar */
+.neumorphic-btn.submit-btn {
+  /* Selector más específico */
+  background-color: #c5b0f9 !important;
+  color: #090027 !important;
+  box-shadow:
+    6px 6px 12px rgba(197, 176, 249, 0.4),
+    -6px -6px 12px rgba(255, 255, 255, 0.3),
+    inset 3px 3px 5px rgba(197, 176, 249, 0.2),
+    inset -3px -3px 5px rgba(255, 255, 255, 0.2);
+}
+
+/* Estados hover */
+.neumorphic-btn.cancel-btn:hover {
+  background-color: #382957 !important;
+  box-shadow:
+    4px 4px 8px rgba(56, 41, 87, 0.5),
+    -4px -4px 8px rgba(255, 255, 255, 0.2),
+    inset 2px 2px 4px rgba(56, 41, 87, 0.3),
+    inset -2px -2px 4px rgba(255, 255, 255, 0.3);
+}
+
+.neumorphic-btn.submit-btn:hover {
+  background-color: #c5b0f9 !important;
+  box-shadow:
+    4px 4px 8px rgba(197, 176, 249, 0.5),
+    -4px -4px 8px rgba(255, 255, 255, 0.2),
+    inset 2px 2px 4px rgba(197, 176, 249, 0.3),
+    inset -2px -2px 4px rgba(255, 255, 255, 0.3);
+}
+
+@media (max-width: 800px) {
+  .Container-calendarCreateEvent2 {
+    min-height: calc(100vh - 120px);
+    height: auto;
+    padding-bottom: 100px;
+  }
+
+  .neumorphic-sunken {
+    padding: 15px;
+  }
+
+  .form-control {
+    padding: 8px 12px;
+  }
+
+  .button-group {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .neumorphic-btn {
+    width: 100%;
+    min-width: auto;
+  }
+}

@@ -1,0 +1,208 @@
+/* Estilo general del carrusel */
+.container-carrucel {
+  margin-top: -90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  height: 220px;
+  padding: 20px;
+  /* Añadido para mejor espaciado interno */
+  background: #f1efff;
+  /* Color base original */
+  border-radius: 10px;
+  /* Radio más pronunciado */
+
+  /* Efecto neumórfico completo */
+  box-shadow:
+    8px 8px 15px rgba(156, 130, 206, 0.4),
+    /* Sombra exterior morada */
+    -8px -8px 15px rgba(255, 255, 255, 0.8),
+    /* Sombra exterior clara */
+    inset 3px 3px 5px rgba(156, 130, 206, 0.1),
+    /* Sombra interior suave */
+    inset -3px -3px 5px rgba(255, 255, 255, 0.3);
+  /* Luz interior */
+
+  transition: all 0.3s ease;
+  position: relative;
+  /* Mejor manejo de elementos internos */
+  z-index: 1;
+  /* Para superposición correcta */
+}
+
+.container-carrucel2 {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  min-height: 10px;
+  /* Cambiado de height a min-height para contenido dinámico */
+  padding: 20px;
+  background: transparent;
+  /* Más claro que rgba con alpha 0 */
+  position: relative;
+  width: 100%;
+  /* Asegura que ocupe todo el ancho disponible */
+}
+
+.container-carrucel2 form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /* Para alinear verticalmente los elementos */
+}
+
+/* Efecto hover opcional */
+.container-carrucel:hover {
+  box-shadow:
+    6px 6px 12px rgba(156, 130, 206, 0.35),
+    -6px -6px 12px rgba(255, 255, 255, 0.75),
+    inset 2px 2px 4px rgba(156, 130, 206, 0.08),
+    inset -2px -2px 4px rgba(255, 255, 255, 0.25);
+}
+
+/* Contenedor de la imagen estática y el texto */
+.imagen-estatica {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  /* Espacio entre la imagen y el texto */
+  max-width: 500px;
+  /* Ajusta según sea necesario */
+  margin-top: 0px;
+  margin-left: 0px;
+}
+
+/* Estilos de la imagen */
+.imagen-estatica img {
+  margin-left: 0px;
+  width: 200px;
+  /* Ajusta el tamaño de la imagen */
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Estilos del texto */
+.texto-estatico {
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+  text-align: left;
+  line-height: 1.5;
+  display: none;
+}
+
+/* Contenedor del carrusel */
+.carrusel {
+  width: 400px;
+  overflow: hidden;
+  margin-left: 0px;
+  border-radius: 10px;
+  position: relative;
+
+  /* Efecto 3D PROFUNDO con perspectiva */
+  transform: perspective(1000px) rotateX(10deg) rotateY(-5deg);
+  box-shadow:
+    15px 20px 40px rgba(0, 0, 0, 0.3),
+    /* Sombra difuminada para profundidad */
+    0 0 0 2px rgba(255, 255, 255, 0.1),
+    /* Borde sutil interno */
+    inset 0 0 30px rgba(0, 0, 0, 0.2);
+  /* Sombra interna para realismo */
+
+  /* Textura 3D (opcional) */
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: linear-gradient(145deg, #ffffff0a, #0000000a);
+
+  transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* Contenedor de las diapositivas */
+.carrusel-slides {
+  display: flex;
+  animation: slideAnimation 15s infinite;
+}
+
+/* Cada diapositiva */
+.slide {
+  min-width: 100%;
+  transition: transform 0.5s ease;
+}
+
+.slide img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.rbc-toolbar .rbc-toolbar-label {
+  text-align: right;
+}
+
+@media (max-width: 900px) {
+
+  .imagen-estatica {
+    margin-left: -10px;
+
+  }
+
+}
+
+@media (max-width: 800px) {
+  .container-carrucel {
+    height: 120px;
+    /* Ajusta según sea necesario */
+  }
+
+  .carrusel {
+    margin-right: 10px;
+  }
+
+  .imagen-estatica {
+    margin-left: 0px;
+
+  }
+
+  .imagen-estatica img {
+    width: 100px;
+    /* Más grande en móvil */
+    margin-left: 10px;
+  }
+}
+
+@media (min-width: 1180px) {
+  .imagen-estatica {
+    margin-left: -240px;
+
+  }
+
+  .imagen-estatica img {
+    margin-left: 120px;
+  }
+
+  .texto-estatico {
+    display: block;
+  }
+}
+
+/* Animación para el desplazamiento automático */
+@keyframes slideAnimation {
+  0% {
+    transform: translateX(0);
+  }
+
+  33% {
+    transform: translateX(-100%);
+  }
+
+  66% {
+    transform: translateX(-200%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}

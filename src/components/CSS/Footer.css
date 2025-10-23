@@ -1,0 +1,125 @@
+.container-Footer {
+  background: linear-gradient(0deg, #3a2b5a 5%, #3a2b5a 100%);
+  color: rgb(238, 223, 255);
+  padding: 15px 0;
+  font-family: "Poppins", serif;
+  text-align: center;
+  border-top: 1px solid #a57fff;
+  position: relative;
+  z-index: 10;
+}
+
+.footer-content {
+  max-width: 1200px;
+  /* Ancho máximo para el contenido */
+  margin: 0 auto;
+  /* Centramos el contenido */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.social-media a {
+  /* Estilos base */
+  display: inline-flex;
+  /* Para centrar íconos fácilmente */
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  /* Tamaño del círculo */
+  height: 40px;
+  border-radius: 50%;
+  /* Forma circular */
+  color: rgb(238, 223, 255);
+  /* Color de texto/ícono */
+  margin: 0 10px;
+  text-decoration: none;
+  font-size: 18px;
+  /* Tamaño del ícono */
+
+  /* Efecto 3D sobresaliente (neumorphism) */
+  background: #3a2b5a;
+  /* Fondo oscuro para contraste (ajusta según tu diseño) */
+  box-shadow:
+    5px 5px 10px rgba(0, 0, 0, 0.3),
+    -5px -5px 10px rgba(255, 255, 255, 0.1),
+    inset 2px 2px 5px rgba(255, 255, 255, 0.05);
+
+  /* Transición para interacciones suaves */
+  transition: all 0.3s ease;
+}
+
+/* Efecto al pasar el ratón (botón presionado) */
+.social-media a:hover {
+  box-shadow:
+    2px 2px 5px rgba(0, 0, 0, 0.2),
+    -2px -2px 5px rgba(255, 255, 255, 0.05),
+    inset 3px 3px 7px rgba(0, 0, 0, 0.3);
+  transform: translateY(2px);
+  /* Efecto de hundimiento leve */
+  color: rgb(255, 240, 255);
+  /* Color más claro al interactuar */
+}
+
+/* Efecto al hacer clic (opcional) */
+.social-media a:active {
+  box-shadow:
+    inset 4px 4px 8px rgba(0, 0, 0, 0.4),
+    inset -4px -4px 8px rgba(255, 255, 255, 0.05);
+}
+
+.P-footer {
+  color: #a57fff;
+  margin: 7px;
+  /* Sin margen */
+}
+
+.whatsapp-contact {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 5px;
+}
+
+.whatsapp-text {
+  color: #ffffff;
+  font-size: 16px;
+  margin: 0;
+}
+
+.whatsapp-icon {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #25D366;
+  /* Color verde de WhatsApp */
+  color: white;
+  text-decoration: none;
+  box-shadow: 0 0 10px rgba(37, 211, 102, 0.5);
+}
+
+/* Efecto de pulso para WhatsApp */
+.pulse {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+  }
+
+  70% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 10px rgba(37, 211, 102, 0);
+  }
+
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+  }
+}

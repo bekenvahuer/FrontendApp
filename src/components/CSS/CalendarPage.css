@@ -1,0 +1,700 @@
+body {
+  font-family: "Poppins", serif;
+}
+
+.Container-calendar {
+  background: linear-gradient(0deg, rgba(255, 255, 255, 1) 5%, rgba(255, 255, 255, 1) 100%);
+  margin-top: 120px;
+}
+
+.Title-calendar {
+
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #090027;
+  text-align: center;
+  margin: 5px 0;
+  font-family: "Poppins", serif;
+
+}
+
+.content-container {
+  margin-top: 15px;
+  background: #ffffff;
+}
+
+.Containder.calendar {
+  width: 100%;
+  color: #eee6fe;
+  transition: height 0.3s ease;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 8px 8px 0 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #f1efff;
+}
+
+/* Estilo para la vista 'month' */
+.Containder.calendar.month {
+  height: 550px;
+}
+
+/* Estilo para la vista 'day' */
+.Containder.calendar.day {
+  height: 1500px;
+}
+
+.Title-calendar-cont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 30px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 20px 0;
+  /* Aumentamos el padding vertical para mejor aspecto */
+  border-radius: 10px;
+  /* Aumentamos el radio para coincidir con el nuevo estilo */
+  background: #f1efff;
+  /* Mantenemos el color base original */
+
+  /* Efecto neumórfico completo (exterior + interior) */
+  box-shadow:
+    6px 6px 12px rgba(156, 130, 206, 0.4),
+    /* Sombra exterior morada */
+    -6px -6px 12px rgba(255, 255, 255, 0.8),
+    /* Sombra exterior clara */
+    inset 3px 3px 5px rgba(156, 130, 206, 0.1),
+    /* Sombra interior suave morada */
+    inset -3px -3px 5px rgba(255, 255, 255, 0.3);
+  /* Sombra interior clara */
+
+  transition: all 0.3s ease;
+  /* Mantenemos la transición suave */
+}
+
+/* Efecto al interactuar (opcional) */
+.Title-calendar-cont:hover {
+  box-shadow:
+    4px 4px 8px rgba(156, 130, 206, 0.3),
+    -4px -4px 8px rgba(255, 255, 255, 0.7),
+    inset 2px 2px 4px rgba(156, 130, 206, 0.05),
+    inset -2px -2px 4px rgba(255, 255, 255, 0.2);
+}
+
+.Container-qr {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 9999;
+}
+
+.Container-qr img {
+  max-width: 60%;
+  max-height: 80%;
+}
+
+
+/* Estilo para el overlay del modal */
+.ReactModal__Overlay--after-open.modal-overlay {
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Poppins", serif;
+}
+
+/* Estilo para el contenido del modal */
+.ReactModal__Content--after-open.modal-content {
+  background-color: #090027;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 600px;
+  width: 90%;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  font-family: "Poppins", serif;
+}
+
+.ReactModal__Overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Fondo oscuro semi-transparente */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.ReactModal__Content {
+  position: relative;
+  background-color: #090027;
+  /* Fondo blanco */
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 400px;
+  width: 100%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  color: #5c7acb;
+  /* Color de texto */
+  font-family: "Poppins", serif;
+}
+
+/* Estilo para el encabezado del modal */
+.modal-header-calendarPage {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eee6fe;
+  padding-bottom: 10px;
+}
+
+.modal-header-calendarPage h2 {
+  font-size: 1.8rem;
+  color: #5c7acb;
+}
+
+.modal-header-calendarPage h3 {
+  font-size: 1.8rem;
+  color: #5c7acb;
+}
+
+.modal-header-calendarPage .btn-secondary {
+  background-color: #99d2ef;
+  color: #090027;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 4px;
+  font-size: 1.2rem;
+}
+
+.modal-header-calendarPage .btn-secondary:hover {
+  background-color: #8c5c0f;
+}
+
+/* Estilo para el cuerpo del modal */
+.modal-body {
+  margin-top: 15px;
+  font-size: 1rem;
+  color: #5c7acb;
+}
+
+.modal-body p {
+  margin: 5px 0;
+}
+
+.modal-body label {
+  font-weight: bold;
+  color: #090027;
+  /* Color de texto */
+}
+
+.modal-body input {
+  padding: 10px;
+  border: 1px solid #eee6fe;
+  border-radius: 5px;
+  font-size: 1rem;
+  color: #090027;
+  /* Color de texto */
+}
+
+.modal-body input:focus {
+  outline: none;
+  border-color: #f196e5;
+  /* Color del borde al enfocar */
+}
+
+/* Estilo para los botones dentro del modal */
+.modal-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+  justify-content: center;
+}
+
+.advert {
+  font-size: 0.75em;
+  width: 100%;
+  margin: 0 auto;
+  text-align: justify;
+}
+
+.modal-buttons-cumple {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+  justify-content: center;
+}
+
+/* Estilos para los botones de acción */
+.btn-primary {
+  background-color: #f1c2d5;
+  border-color: #f1c2d5;
+  color: #ffffff;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn-primary:hover {
+  background-color: #e0afc4;
+}
+
+.btn-success {
+  background-color: #d091ab;
+  border-color: #d091ab;
+  color: #cbcbcb;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-danger {
+  background-color: #c06389;
+  border-color: #c06389;
+  color: #cbcbcb;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.rbc-button-link {
+  background-color: #d8cafa;
+  color: #090027;
+  border-radius: 50%;
+  /* Más estándar para círculos perfectos */
+  width: 30px;
+  height: 30px;
+  border: none;
+  /* Elimina bordes por defecto */
+  cursor: pointer;
+
+  /* Efecto de profundidad (sunken) */
+  box-shadow:
+    inset 3px 3px 5px rgba(156, 130, 206, 0.7),
+    /* Sombra morada oscura */
+    inset -3px -3px 5px rgba(255, 255, 255, 0.8);
+  /* Sombra blanca */
+
+  /* Transición para interacción */
+  transition: all 0.2s ease;
+}
+
+/* Efecto al presionar (opcional) */
+.rbc-button-link:active {
+  box-shadow:
+    inset 4px 4px 6px rgba(156, 130, 206, 0.8),
+    inset -4px -4px 6px rgba(255, 255, 255, 0.6);
+}
+
+.rbc-off-range .rbc-button-link {
+  background: #fff;
+}
+
+.rbc-now .rbc-button-link {
+  background-color: #a57fff;
+
+}
+
+.rbc-today {
+  background-color: #f1efff;
+}
+
+.rbc-off-range-bg {
+  background: #f1efff;
+}
+
+.rcb-button-link {
+  background: #e0c3ec;
+}
+
+.rbc-header {
+  color: #090027;
+}
+
+.rbc-toolbar {
+  color: #090027;
+  font-family: "Poppins", serif;
+  background: #d8cafa;
+  /* Mantenemos el color base original */
+  border-radius: 12px;
+  /* Aumentamos ligeramente el border-radius */
+  border: none;
+  padding: 10px 15px;
+  /* Añadimos padding para mejor espaciado interno */
+
+  /* Efecto neumórfico hundido (sunken) - Versión con sombras internas */
+  box-shadow:
+    inset 4px 4px 8px rgba(156, 130, 206, 0.7),
+    /* Sombra interna morada oscura */
+    inset -4px -4px 8px rgba(255, 255, 255, 0.8);
+  /* Sombra interna clara */
+
+  transition: all 0.3s ease;
+}
+
+/* Efecto al interactuar (opcional - más pronunciado) */
+.rbc-toolbar:hover {
+  box-shadow:
+    inset 5px 5px 10px rgba(156, 130, 206, 0.75),
+    inset -5px -5px 10px rgba(255, 255, 255, 0.85);
+}
+
+.rbc-toolbar-label {
+  font-size: 20px;
+
+}
+
+.rbc-event {
+  background-color: #99d2ef;
+  pointer-events: none !important;
+  cursor: default !important;
+}
+
+/* Excepción para vista day */
+.rbc-day-view .rbc-event {
+  pointer-events: auto !important;
+  cursor: pointer !important;
+}
+
+
+.rbc-toolbar button {
+  font-family: "Poppins", serif;
+  color: #090027;
+
+}
+
+.rbc-btn-group {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.rbc-btn {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.Container-calendar .Containder.calendar {
+  transition: opacity 0.3s ease-in-out;
+  font-family: "Poppins", serif;
+}
+
+/* Estilos para el mensaje de error */
+.error-message {
+  color: red;
+  font-size: 0.9rem;
+  margin-top: 10px;
+}
+
+.rbc-month-view {
+  border: 0px solid #ddd;
+  margin-top: 15px;
+}
+
+.rbc-day-bg+.rbc-day-bg {
+  border-left: 0px solid #ddd;
+}
+
+.rbc-month-row+.rbc-month-row {
+  border-top: 0px solid #ddd;
+}
+
+.rbc-header+.rbc-header {
+  border-top: 0px solid #ddd;
+}
+
+.rbc-header {
+  border-bottom: 0px solid #ddd;
+}
+
+.rbc-toolbar button {
+  border: 0px solid #ddd;
+}
+
+.rbc-label {
+  color: #090027;
+}
+
+/* Estilos para el contenedor QR */
+.Container-qr {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 9999;
+}
+
+.qr-background-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.qr-background-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+}
+
+.qr-layout-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 80%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Sección del logo */
+.qr-logo-section {
+  flex: 1 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  flex-direction: row;
+  color: #fff;
+}
+
+.qr-logo-image {
+  max-height: 40%;
+  max-width: 40%;
+}
+
+.qr-logo-image2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-height: 60%;
+  max-width: 60%;
+  border-radius: 15px;
+
+}
+
+/* Sección del QR */
+.qr-code-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+}
+
+.qr-plan-info {
+  margin-top: 20px;
+  /* background-color: rgba(255, 255, 255, 0.8); */
+  padding: 10px 20px;
+  border-radius: 8px;
+
+}
+
+/* Sección de información */
+.qr-info-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  color: #fff;
+  padding-bottom: 50px;
+}
+
+.qr-info-username {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.qr-info-url {
+  margin-bottom: 10px;
+  font-size: 0.9em;
+}
+
+.qr-info-label {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.qr-info-value {
+  margin-top: 5px;
+}
+
+.logo-info-label {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.logo-info-value {
+  margin-top: 5px;
+}
+
+/* Botón de cerrar */
+.qr-close-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: #99d2ef;
+  border-color: #99d2ef;
+  color: #090027;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+/* Estilos para el contenedor de URL y botón */
+.qr-info-url-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 5px;
+}
+
+.qr-info-url {
+  font-size: 15px;
+  color: #ffffff;
+}
+
+.copy-url-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #666;
+  padding: 4px;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+}
+
+.copy-url-button:hover {
+  color: #000;
+  transform: scale(1.1);
+}
+
+/* Notificación de copiado */
+.copy-notification {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #4CAF50;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  animation: fadeInOut 2s ease-in-out;
+  z-index: 1000;
+}
+
+/* Efecto de pulso/animation */
+.pending-pulse {
+  animation: pulse 2s infinite;
+  color: #3a2b5a;
+  /* Color rojo/anaranjado para llamar la atención */
+  text-shadow: 0 0 5px rgba(255, 107, 107, 0.5);
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  50% {
+    transform: scale(1.05);
+    opacity: 0.8;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInOut {
+
+  0%,
+  100% {
+    opacity: 0;
+  }
+
+  20%,
+  80% {
+    opacity: 1;
+  }
+}
+
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  .qr-logo-image {
+    max-height: 60%;
+    max-width: 60%;
+  }
+
+  .qr-plan-info {
+    padding: 8px 16px;
+    font-size: 0.9em;
+  }
+
+  .qr-info-section {
+    font-size: 0.9em;
+  }
+}
+
+.qr-code-container {
+  background-color: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 480px) {
+  .qr-layout-container {
+    padding: 15px;
+  }
+
+  .qr-close-button {
+    padding: 8px 12px;
+    font-size: 0.9em;
+  }
+}
+
+@media (max-width: 430px) {
+  .Containder.calendar {
+    height: 510px;
+  }
+
+  .Container-qr {
+    height: 100vh;
+    margin-top: 0;
+  }
+
+  .Container-qr img {
+    max-width: 90%;
+    max-height: 100%;
+  }
+}

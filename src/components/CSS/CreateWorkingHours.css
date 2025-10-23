@@ -1,0 +1,42 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    margin: auto;
+    gap: 10px;
+}
+
+.fixed-section {
+    background-color: #ffcc00;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.step {
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    color: white;
+}
+
+.step-1 {
+    background-color: #ff5733;
+}
+
+.step-2 {
+    background-color: #33ff57;
+}
+
+.step-3 {
+    background-color: #3357ff;
+}
+
+.step-4 {
+    background-color: #ff33a1;
+}
+
+.disabled {
+    opacity: 0.5;
+    pointer-events: none;
+}

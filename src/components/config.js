@@ -1,2 +1,2 @@
-export const API_BASE_URL = "https://clickcitaapp-backend.onrender.com/api";
-export const FRONTEND_URL = "http://localhost";
+export const API_BASE_URL = "https://tama-baleless-dominick.ngrok-free.dev";
+export const FRONTEND_URL = "https://frontendapp-hz83.onrender.com";
